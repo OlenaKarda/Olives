@@ -340,7 +340,6 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.6875rem;
 }
 
 .menu__link {
@@ -418,6 +417,8 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
+  padding: 0.625rem 0rem;
   color: #fff;
   height: 3.25rem;
   font-weight: 400;
@@ -454,7 +455,6 @@ h6 {
 }
 
 .reserve {
-  padding-top: 2.5rem;
   padding-bottom: 1.25rem;
 }
 
@@ -789,6 +789,14 @@ h6 {
 }
 
 @media (min-width: 87.5em) {
+  .menu__list {
+    gap: 1.6875rem;
+  }
+
+  .reserve {
+    padding-top: 2.5rem;
+  }
+
   .who {
     padding-top: 5rem;
   }
@@ -811,6 +819,14 @@ h6 {
 }
 
 @media (max-width: 20em) {
+  .menu__list {
+    gap: 1.0625rem;
+  }
+
+  .reserve {
+    padding-top: 1.25rem;
+  }
+
   .who {
     padding-top: 3.75rem;
   }
@@ -824,11 +840,11 @@ h6 {
   }
 
   .product {
-    padding-top: 3.75rem;
+    padding-top: 1.25rem;
   }
 
   .product {
-    padding-bottom: 3.75rem;
+    padding-bottom: 1.875rem;
   }
 }
 
@@ -978,6 +994,18 @@ h6 {
     display: none;
   }
 
+  .top {
+    font-size: 0.625rem;
+  }
+
+  .first__body {
+    top: 9.3125rem;
+  }
+
+  .first__image-ibg {
+    height: 33.0625rem;
+  }
+
   .who__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1038,6 +1066,10 @@ h6 {
         align-self: center;
   }
 
+  .top {
+    font-size: 0.5rem;
+  }
+
   .body-info__first {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1064,6 +1096,30 @@ h6 {
 }
 
 @media (min-width: 20em) and (max-width: 87.5em) {
+@supports (gap: clamp( 1.0625rem , 0.8773148148rem  +  0.9259259259vw , 1.6875rem )) {
+    .menu__list {
+      gap: clamp( 1.0625rem , 0.8773148148rem  +  0.9259259259vw , 1.6875rem );
+    }
+}
+
+@supports not (gap: clamp( 1.0625rem , 0.8773148148rem  +  0.9259259259vw , 1.6875rem )) {
+    .menu__list {
+      gap: calc(1.0625rem + 0.625 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem )) {
+    .reserve {
+      padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 0.8796296296rem  +  1.8518518519vw , 2.5rem )) {
+    .reserve {
+      padding-top: calc(1.25rem + 1.25 * (100vw - 20rem) / 67.5);
+    }
+}
+
 @supports (padding-top: clamp( 3.75rem , 3.3796296296rem  +  1.8518518519vw , 5rem )) {
     .who {
       padding-top: clamp( 3.75rem , 3.3796296296rem  +  1.8518518519vw , 5rem );
@@ -1100,27 +1156,27 @@ h6 {
     }
 }
 
-@supports (padding-top: clamp( 3.75rem , 2.7314814815rem  +  5.0925925926vw , 7.1875rem )) {
+@supports (padding-top: clamp( 1.25rem , -0.5092592593rem  +  8.7962962963vw , 7.1875rem )) {
     .product {
-      padding-top: clamp( 3.75rem , 2.7314814815rem  +  5.0925925926vw , 7.1875rem );
+      padding-top: clamp( 1.25rem , -0.5092592593rem  +  8.7962962963vw , 7.1875rem );
     }
 }
 
-@supports not (padding-top: clamp( 3.75rem , 2.7314814815rem  +  5.0925925926vw , 7.1875rem )) {
+@supports not (padding-top: clamp( 1.25rem , -0.5092592593rem  +  8.7962962963vw , 7.1875rem )) {
     .product {
-      padding-top: calc(3.75rem + 3.4375 * (100vw - 20rem) / 67.5);
+      padding-top: calc(1.25rem + 5.9375 * (100vw - 20rem) / 67.5);
     }
 }
 
-@supports (padding-bottom: clamp( 3.75rem , 2.25rem  +  7.5vw , 8.8125rem )) {
+@supports (padding-bottom: clamp( 1.875rem , -0.1805555556rem  +  10.2777777778vw , 8.8125rem )) {
     .product {
-      padding-bottom: clamp( 3.75rem , 2.25rem  +  7.5vw , 8.8125rem );
+      padding-bottom: clamp( 1.875rem , -0.1805555556rem  +  10.2777777778vw , 8.8125rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 3.75rem , 2.25rem  +  7.5vw , 8.8125rem )) {
+@supports not (padding-bottom: clamp( 1.875rem , -0.1805555556rem  +  10.2777777778vw , 8.8125rem )) {
     .product {
-      padding-bottom: calc(3.75rem + 5.0625 * (100vw - 20rem) / 67.5);
+      padding-bottom: calc(1.875rem + 6.9375 * (100vw - 20rem) / 67.5);
     }
 }
 }
